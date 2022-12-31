@@ -1,8 +1,4 @@
-# jumpstart-custom
-
-## Getting Started
-
-Jumpstart Custom is a Rails template, so you pass it in as an option when creating a new app.
+# projectio
 
 #### Requirements
 
@@ -44,7 +40,7 @@ end
 
 - create table expression: insert after the table name: ", id: :uuid" # minus quotes, sets Primary key uuid
 - foreign_key expression: append: ", type: :uuid" # minus quotes, sets Foreign key uuid
-- In ApplicationRecord insert - self.implicit_order_column = 'created_at'  under primary_abstract_class line
+- In ApplicationRecord insert - self.implicit_order_column = 'created_at' under primary_abstract_class line
 
 $ rails db:migrate:reset
 
@@ -95,8 +91,8 @@ After migration field/column added,
 Can be adjusted in application_controler, example below add a github_link
 
 def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :avatar, :github_link])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
+devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :avatar, :github_link])
+devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
 end
 
 and add to the create method in onmniauth_controller
@@ -176,7 +172,7 @@ brew services start redis
 
 ##### Ubuntu
 
-```
+````
 sudo apt-get install redis-server
 
 
@@ -187,4 +183,4 @@ rails db:drop
 spring stop
 cd ..
 rm -rf myapp
-```
+````

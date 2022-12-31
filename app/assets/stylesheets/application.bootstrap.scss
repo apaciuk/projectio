@@ -2,3 +2,18 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import "jumpstart/announcements";
 @import 'actiontext.scss';
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: darkslateblue;
+
+}
+
+.project a {
+    font-weight: 500;
+    color: darkslateblue;
+    text-decoration: none;
+}
