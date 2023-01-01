@@ -1,17 +1,5 @@
 
-
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title"><%= @project.name %></h5>
-    <div class="card-subtitle mb-2 text-muted">Created at: <%= @project.created_at.strftime("%d/%m/%Y") %></h6>
-    <p class="card-text"><%= @project.description %></p>
-    <div class="card-link">
-      <%= link_to 'Show', project_path(@project) %>
-      <%= link_to 'Edit', edit_project_path(@project) %>
-      <%= link_to 'Destroy', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
-</div>
+<%= render partial: "projects/project", locals: { project: @project } %>
 
 
 
@@ -21,4 +9,5 @@
   <%= render @project.comments.order(created_at: :desc) %>
 </div>
 
-  
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
