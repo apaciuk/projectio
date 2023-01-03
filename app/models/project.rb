@@ -11,4 +11,5 @@ class Project < ApplicationRecord
     validates :name, presence: true
     has_many :comments, dependent: :destroy, class_name: "Comment", foreign_key: "project_id"
     accepts_nested_attributes_for :comments
+    has_rich_text :description
 end

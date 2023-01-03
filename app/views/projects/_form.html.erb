@@ -16,8 +16,12 @@
       <%= form.text_field :name, class: 'form-control', placeholder: "Project name..." %>
     </div>
 
+    <div class="form-group mb-3">
+      <%= form.label :description, class: 'form-label' %>
+      <%= form.rich_text_area :description, class: 'form-control', placeholder: "Project description..." %>
+    </div>
 
-  <div class="mb-3">
+    <div class="mb-3">
     <% if project.persisted? %>
       <div class="float-end">
         <%= link_to 'Destroy', project, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
